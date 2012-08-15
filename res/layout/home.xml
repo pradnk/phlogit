@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.markupartist.android.widget.ActionBar
+		android:id="@+id/actionBar1" style="@style/ActionBar"></com.markupartist.android.widget.ActionBar>
+    
+    <include 
+        layout="@layout/colorstrip"/>
+        
+    <GridView android:layout_height="fill_parent" android:id="@+id/gridView1"
+		android:layout_width="fill_parent"
+		android:numColumns="2"
+		android:scrollbars="none"
+		android:columnWidth="80dp"
+		android:padding="20dp" android:gravity="center" android:stretchMode="columnWidth" 
+		android:background="@drawable/bg_layer_list"
+		android:focusable="false"
+		android:listSelector="@drawable/home_button"/>
+
+</LinearLayout>

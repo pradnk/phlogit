@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/bg_layer_list">
+	<com.markupartist.android.widget.ActionBar
+		android:id="@+id/actionBar1" style="@style/ActionBar">
+	</com.markupartist.android.widget.ActionBar>
+	<ScrollView android:id="@+id/scrollView1"
+		android:layout_height="fill_parent" android:layout_width="fill_parent">
+		<LinearLayout 
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:gravity="center"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="10dp">
+			<ImageView
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:src="@drawable/home_logo_about" />
+			<TextView 
+			    style="@style/DarkTextBold"
+				android:gravity="center"
+				android:text="phLogIt! - phLog your trips!"
+				android:layout_marginTop="10dp" />
+			<View android:layout_width="fill_parent"
+			    android:layout_height="20dp" />
+			<TextView 
+			    style="@style/DarkText"
+				android:gravity="center"
+				android:text="The ultimate photo logging tool with auto sync to Facebook and many more features.\n\nDeveloped by Pradeep Kaushik\n\nSend any feedback to pradnk+phlogit@gmail.com" />			
+		</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>

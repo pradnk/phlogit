@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="auto"
+    package="com.intuit.project.phlogit"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.intuit.project.phlogit.Phlogit" >
+        <activity
+            android:label="@string/app_name"
+            android:name=".SplashActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".SnapPictureActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity android:name=".ViewActivity" 
+            android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".TimelineViewActivity" 
+            android:screenOrientation="landscape"
+        />
+        <activity android:name=".ShareActivity" />
+        <activity android:name=".PlanTripActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden" />
+        <activity android:name=".PlanTripActivity2" 
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ViewTripsActivity" 
+            android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".ViewTripDetailsActivity" 
+            android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".Places" 
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:theme="@style/TranslucentTheme"/>
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:name=".ImagesListActivity" />
+        <activity android:name=".ImageViewerActivity" 
+            android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".AboutActivity" 
+            android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".SettingsActivity" 
+            android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".StatisticsActivity" 
+            android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".socialnetwork.WebViewClientActivity" 
+            android:configChanges="orientation|keyboard|keyboardHidden"/>
+        
+        <activity android:name="org.achartengine.GraphicalActivity"
+            android:theme="@style/TranslucentThemeDialog" />
+        
+        <service android:name="com.intuit.project.phlogit.service.SyncService" />
+        
+        <provider
+            android:authorities="com.intuit.project.phlogit"
+            android:multiprocess="false"
+            android:name="com.intuit.project.phlogit.provider.CustomDataProvider"
+            android:syncable="false" />
+        
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+</manifest>

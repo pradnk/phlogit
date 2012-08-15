@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_tile"
+    android:orientation="vertical" >
+
+    <com.markupartist.android.widget.ActionBar
+        android:id="@+id/actionBar1"
+        style="@style/ActionBar" >
+    </com.markupartist.android.widget.ActionBar>
+
+    <GridView
+        android:id="@+id/details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:padding="10dp"
+        android:listSelector="@drawable/image_selector"
+        android:stretchMode="columnWidth"
+        android:layout_below="@+id/actionBar1"
+        android:verticalSpacing="10dp" />
+    
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:background="@drawable/empty_message_bg"
+        android:layout_centerInParent="true"
+        android:padding="2dp"
+        android:visibility="gone">
+        <TextView 
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:text="No Images Yet!\n\nStart Clicking!"
+        	android:layout_gravity="center"
+        	android:gravity="center"
+        	android:textSize="18sp"
+        	android:textStyle="bold"
+        	android:textColor="@color/empty_view_text" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="start_color_splash">#44639d</color>
+    <color name="center_color_splash">#3f9fcf</color>
+    <color name="end_color_splash">#6bb4da</color>
+    <color name="button_bg_color">#ececec</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent">#40000000</color>
+    <color name="ltgray">#efefef</color>
+    <color name="dark_gray">#808080</color>
+    <color name="dialog_edit_text_normal_border_color">#c7c7c7</color>
+	<color name="dialog_edit_text_focused_border_color">#6192CA</color><!-- BC and Alan -->
+	<color name="dialog_edit_text_start_color">#f2f2f2</color>
+	<color name="dialog_edit_text_end_color">#ffffff</color>
+	<color name="empty_view_text">#010401</color>
+</resources>

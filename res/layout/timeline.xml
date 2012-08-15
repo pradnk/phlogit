@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_layer_list"
+    android:orientation="vertical"
+    android:id="@+id/rootView">
+
+    <view
+        xmlns:coverflow="http://schemas.android.com/apk/res/com.intuit.project.phlogit"
+        android:id="@+id/coverflow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dip"
+        class="com.intuit.project.phlogit.widget.CoverFlow"
+        coverflow:imageHeight="200dip"
+        coverflow:imageWidth="150dip" >
+    </view>
+
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/empty_message_bg"
+        android:padding="2dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="No Images Yet!\n\nStart Clicking!"
+            android:textColor="@color/empty_view_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/timelineView"
+        android:background="@color/translucent"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/monthText"
+            style="@style/DarkTextBold"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Month" />
+
+        <TextView
+            android:id="@+id/dateText"
+            style="@style/DarkTextBold"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Day" />
+
+        <TextView
+            android:id="@+id/yearText"
+            style="@style/DarkTextBold"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Year" />
+    </LinearLayout>
+
+</RelativeLayout>

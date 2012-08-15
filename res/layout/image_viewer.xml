@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/translucent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+    
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat" 
+        android:maxWidth="50dp"
+        android:maxHeight="50dp" />
+
+    <LinearLayout
+        android:id="@+id/toggle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_bg"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/syncSection"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/sync"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text=" Sync"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/sync"
+                android:drawablePadding="3dp" />
+            
+        </LinearLayout>
+		
+        <LinearLayout
+            android:id="@+id/likesSection"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/likes"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text=" Like"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/like"
+                android:drawablePadding="3dp" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/commentsSection"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text=" Comments"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:drawableLeft="@drawable/comments"
+                android:drawablePadding="3dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+        
+    <RelativeLayout
+        android:id="@+id/commentsListSection"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:background="@color/translucent"
+        android:visibility="gone" >
+        
+        <ListView
+            android:id="@+id/commentsList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_above="@+id/addCommentsSection" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0"
+            android:id="@+id/addCommentsSection"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/addComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dialog_edit_text_border"
+                android:layout_weight="3"
+                android:hint="Write a comment..." />
+
+            <Button
+                android:id="@+id/addCommentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Send" />
+        </LinearLayout>
+    </RelativeLayout>
+        
+</RelativeLayout>

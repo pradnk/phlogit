@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<integer name="sizefactor">95</integer>
+	<integer name="landscapesizefactor">100</integer>
+	<integer name="squaresizefactor">80</integer>
+</resources>

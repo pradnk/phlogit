@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/dark_gray" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_layer_list">
+
+            <TextView
+                android:id="@+id/titleText"
+                style="@style/TranslucentTextTitleBold"
+                android:layout_centerHorizontal="true"
+                android:text="Plan your trip" />
+
+            <ImageView
+                android:id="@+id/titleImage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleText"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/horizontal_separator" />
+
+            <AutoCompleteTextView
+                android:id="@+id/destination"
+                style="@style/DialogEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleImage"
+                android:layout_margin="15dp"
+                android:completionThreshold="1"
+                android:singleLine="true"
+                android:hint="Enter Destination Name " />
+
+            <EditText
+                android:id="@+id/from"
+                style="@style/DialogEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/destination"
+                android:layout_margin="15dp"
+                android:hint="Start Date (yyyy-MM-dd) "
+                android:inputType="date"
+                android:singleLine="true"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/to"
+                style="@style/DialogEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/from"
+                android:layout_margin="15dp"
+                android:hint="Number of days "
+                android:inputType="number"
+                android:singleLine="true"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/comments"
+                style="@style/DialogEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/to"
+                android:layout_margin="15dp"
+                android:hint="Comments (Optional) "
+                android:inputType="textMultiLine"
+                android:minLines="5"
+                android:padding="5dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Review" />
+                
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel" />
+                
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
